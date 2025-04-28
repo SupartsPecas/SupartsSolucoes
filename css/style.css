@@ -1,0 +1,277 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background-color: #ffffff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.top-header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 0; /* Garante que comece bem do canto esquerdo */
+}
+
+
+.logo img {
+  width: 400px;
+  height: auto;
+  display: block;
+}
+
+
+.info {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info a {
+  color: #002ead;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Menu de navegação */
+nav.menu {
+  background-color: #002ead;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav.menu ul li {
+  display: inline;
+}
+
+nav.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav.menu ul li a:hover {
+  background-color: #001a80;
+  border-radius: 5px;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 60px;
+  z-index: 1000;
+}
+
+.whatsapp-button img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo do carrossel/banner */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  width: 100%; /* mantém o banner ocupando a largura total */
+  height: 1100px; /* aqui você define a altura que quiser */
+  object-fit: cover; /* garante que a imagem preencha o espaço sem distorcer */
+  vertical-align: middle;
+}
+
+
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s ease;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+  text-align: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Rodapé */
+footer {
+  background-color: #002ead;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Texto adicional */
+.extra-content {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* Formulário de contato */
+.form-contato {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.form-contato label {
+  font-weight: bold;
+  color: #002ead;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: #002ead;
+  outline: none;
+}
+
+.form-contato button {
+  background-color: #002ead;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: #001a80;
+}
